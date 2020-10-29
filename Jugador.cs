@@ -1,6 +1,6 @@
 using System;
 
-public class Persona {
+public class Jugador {
     
     private string[] pajarosAsignados;
     private int rondasGanadas;
