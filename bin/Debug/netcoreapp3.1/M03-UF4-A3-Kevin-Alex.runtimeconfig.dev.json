@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/espai/user-data/tarda/.dotnet/store/|arch|/|tfm|",
+      "/espai/user-data/tarda/.nuget/packages"
+    ]
+  }
+}

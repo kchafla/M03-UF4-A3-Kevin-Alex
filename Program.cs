@@ -27,5 +27,17 @@ class MainClass {
 
     Jugador jugador1 = new Jugador();
     Jugador jugador2 = new Jugador();
+
+    Partida partida = new Partida();
+
+    Ronda ronda = new Ronda();
+
+    Console.WriteLine("Con cuantos pajaros vas a jugar? (1, 3 o 5");
+    int cuantosPajaros = Convert.ToInt32(Console.ReadLine());
+    if (cuantosPajaros == 1 || cuantosPajaros == 3 || cuantosPajaros == 5) {
+      partida.EmpezarPartida(cuantosPajaros);
+    } else {
+      Console.WriteLine("Escribe 1, 3 o 5!!!");
+    }
   }
 }

@@ -4,14 +4,13 @@ public class Ronda{
     
     int numeroRonda;
 
-    static int CompararPajaros(Pajaro pj1, Pajaro pj2){
-        if (pj1.energia > pj2.energia){
+    public int CompararPajaros(Pajaro pj1, Pajaro pj2) {
+        if (pj1.GetEnergia() > pj2.GetEnergia()) {
             return 1;             
-        }else if(pj1.energia < pj2.energia){
+        }else if(pj1.GetEnergia() < pj2.GetEnergia()) {
             return 2;
-        }else if (pj1.energia == pj2.energia){
-            return 3
+        }else {
+            return 3;
         }
     }
-    static 
 }

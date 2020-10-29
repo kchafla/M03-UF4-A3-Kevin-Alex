@@ -1,0 +1,13 @@
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/obj/Debug/netcoreapp3.1/M03-UF4-A3-Kevin-Alex.csprojAssemblyReference.cache
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/obj/Debug/netcoreapp3.1/M03-UF4-A3-Kevin-Alex.AssemblyInfoInputs.cache
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/obj/Debug/netcoreapp3.1/M03-UF4-A3-Kevin-Alex.AssemblyInfo.cs
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/obj/Debug/netcoreapp3.1/M03-UF4-A3-Kevin-Alex.csproj.CoreCompileInputs.cache
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/bin/Debug/netcoreapp3.1/M03-UF4-A3-Kevin-Alex
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/bin/Debug/netcoreapp3.1/M03-UF4-A3-Kevin-Alex.deps.json
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/bin/Debug/netcoreapp3.1/M03-UF4-A3-Kevin-Alex.runtimeconfig.json
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/bin/Debug/netcoreapp3.1/M03-UF4-A3-Kevin-Alex.runtimeconfig.dev.json
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/bin/Debug/netcoreapp3.1/M03-UF4-A3-Kevin-Alex.dll
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/bin/Debug/netcoreapp3.1/M03-UF4-A3-Kevin-Alex.pdb
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/obj/Debug/netcoreapp3.1/M03-UF4-A3-Kevin-Alex.dll
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/obj/Debug/netcoreapp3.1/M03-UF4-A3-Kevin-Alex.pdb
+/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/obj/Debug/netcoreapp3.1/M03-UF4-A3-Kevin-Alex.genruntimeconfig.cache

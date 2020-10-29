@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "M03-UF4-A3-Kevin-Alex/1.0.0": {
+        "runtime": {
+          "M03-UF4-A3-Kevin-Alex.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "M03-UF4-A3-Kevin-Alex/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
