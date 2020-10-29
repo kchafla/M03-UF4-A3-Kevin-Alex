@@ -1,6 +1,7 @@
 using System;
 
-class Pajaro{
+public class Pajaro {
+    
     private string nombre;
     private string especie;
     private string poder;
