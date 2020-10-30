@@ -1,8 +1,9 @@
 using System;
+using System.Linq;
 
 public class Jugador {
     
-    private string[] pajarosAsignados;
+    private Pajaro[] pajarosAsignados = new Pajaro[5];
     private int rondasGanadas;
 
     public void SumarRondas(bool ganador) {
@@ -11,20 +12,16 @@ public class Jugador {
         }
     }
 
-    public void RecibirPajaros(string pajaroAsignado) {
-        for (int n = 0; n < pajarosAsignados.Length; n++) {
-            if (String.Equals(pajarosAsignados[n], "")) {
-                pajarosAsignados[n] = pajaroAsignado;
-            }
-        }
+    public void RecibirPajaros(Pajaro pajaroAsignado, int posicion) {
+        pajarosAsignados[posicion] = pajaroAsignado;
     }
 
-    public string SacarPajaros(int posicion) {
-        string pajaroParaSacar = "";
-        if (!String.Equals(pajarosAsignados[posicion], "")) {
-            pajaroParaSacar = pajarosAsignados[posicion];
-            pajarosAsignados[posicion] = "";
-        }
+    public Pajaro SacarPajaros(int posicion) {
+        Pajaro pajaroParaSacar;
+
+        pajaroParaSacar = pajarosAsignados[posicion];
+        pajarosAsignados[posicion] = null;
+
         return pajaroParaSacar;
     }
 }

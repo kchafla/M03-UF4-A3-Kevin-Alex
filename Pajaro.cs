@@ -1,5 +1,3 @@
-using System;
-
 public class Pajaro {
     
     private string nombre;
