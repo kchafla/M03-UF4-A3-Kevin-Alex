@@ -1,11 +1,11 @@
 public class Ronda{
     
-    public int CompararPajaros(Pajaro pj1, Pajaro pj2) {
-        if (pj1.GetEnergia() > pj2.GetEnergia()) {
+    public int CompararPajaros(int pj1, int pj2) {
+        if (pj1 > pj2) {
             return 1;             
-        }else if(pj1.GetEnergia() < pj2.GetEnergia()) {
+        } else if(pj1 < pj2) {
             return 2;
-        }else {
+        } else {
             return 3;
         }
     }

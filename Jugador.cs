@@ -1,6 +1,3 @@
-using System;
-using System.Linq;
-
 public class Jugador {
     
     private Pajaro[] pajarosAsignados = new Pajaro[5];
@@ -17,11 +14,16 @@ public class Jugador {
     }
 
     public Pajaro SacarPajaros(int posicion) {
-        Pajaro pajaroParaSacar;
+        Pajaro pajaroParaSacar = pajarosAsignados[posicion];
 
-        pajaroParaSacar = pajarosAsignados[posicion];
-        pajarosAsignados[posicion] = null;
-
+        for (int i = posicion-1; i < 4; i++) {
+            pajarosAsignados[i] = pajarosAsignados[i + 1];
+        }
+        
         return pajaroParaSacar;
+    }
+
+    public Pajaro[] GetPajaros() {
+        return pajarosAsignados;
     }
 }

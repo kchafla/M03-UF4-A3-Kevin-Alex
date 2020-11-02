@@ -29,12 +29,9 @@ class MainClass {
     Jugador jugador1 = new Jugador();
     Jugador jugador2 = new Jugador();
 
-    Partida partida = new Partida();
-
-    Ronda ronda = new Ronda();
-
     Random rand = new Random();
 
+    Partida partida = new Partida();
     Console.WriteLine("Con cuantos pajaros vas a jugar? (1, 3 o 5)");
     int cuantosPajaros = Convert.ToInt32(Console.ReadLine());
     if (cuantosPajaros == 1 || cuantosPajaros == 3 || cuantosPajaros == 5) {
@@ -48,23 +45,44 @@ class MainClass {
         jugador2.RecibirPajaros(todospajaros[pajarojugador2], n);
       }
 
+      Ronda ronda = new Ronda();
       for (int r = 0; r < cuantosPajaros; r++) {
-        Console.WriteLine("Jugador 1, que pajaro quieres sacar?");
+        Console.WriteLine("\nJugador 1, que pajaro quieres sacar?");
+        Pajaro[] j1pajaros = jugador1.GetPajaros();
+        for (int n = 0; n < cuantosPajaros; n++) {
+          if (n == cuantosPajaros-1) {
+            Console.Write(j1pajaros[n].GetNombre() + ".\n");
+          } else {
+            Console.Write(j1pajaros[n].GetNombre() + ", ");
+          }
+        }
         int sacar1 = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Jugador 2, que pajaro quieres sacar?");
+        Console.WriteLine("\nJugador 2, que pajaro quieres sacar?");
+        Pajaro[] j2pajaros = jugador2.GetPajaros();
+        for (int n = 0; n < cuantosPajaros; n++) {
+          if (n == cuantosPajaros-1) {
+            Console.Write(j2pajaros[n].GetNombre() + ".\n");
+          } else {
+            Console.Write(j2pajaros[n].GetNombre() + ", ");
+          }
+        }
         int sacar2 = Convert.ToInt32(Console.ReadLine());
 
-        int puntuacion = ronda.CompararPajaros(jugador1.SacarPajaros(sacar1), jugador1.SacarPajaros(sacar2));
+        int puntuacion = ronda.CompararPajaros(jugador1.SacarPajaros(sacar1-1).GetEnergia(), jugador2.SacarPajaros(sacar2-1).GetEnergia());
         if (puntuacion == 1) {
-          Console.WriteLine("Ha ganado jugador 1!");    
+          Console.WriteLine("\nHa ganado jugador 1!");
+          cuantosPajaros--;
+          jugador1.SumarRondas(true);
         }else if (puntuacion == 2) {
-          Console.WriteLine("Ha ganado jugador 2!");
+          Console.WriteLine("\nHa ganado jugador 2!");
+          cuantosPajaros--;
+          jugador2.SumarRondas(true);
         }else if (puntuacion == 3) {
-          Console.WriteLine("Empate!");
+          Console.WriteLine("\nEmpate!");
         }
       }
-      
+
     } else {
       Console.WriteLine("Escribe 1, 3 o 5!!!");
     }

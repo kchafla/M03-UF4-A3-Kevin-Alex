@@ -15,4 +15,8 @@ public class Pajaro {
     public int GetEnergia() {
         return energia;
     }
+
+    public string GetNombre() {
+        return nombre;
+    }
 }
