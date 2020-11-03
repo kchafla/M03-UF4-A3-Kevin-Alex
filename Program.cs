@@ -23,6 +23,7 @@ class MainClass {
     do {
       Console.WriteLine("Con cuantos pajaros vas a jugar? (1, 3 o 5)");
       cuantosPajaros = Convert.ToInt32(Console.ReadLine());
+
       if (cuantosPajaros == 1 || cuantosPajaros == 3 || cuantosPajaros == 5) {
         partida.EmpezarPartida(cuantosPajaros);
         Jugador jugador1 = new Jugador();
@@ -81,6 +82,7 @@ class MainClass {
 
         int rondasGanadasJ1 = jugador1.GetRondasGanadas();
         int rondasGanadasJ2 = jugador2.GetRondasGanadas();
+
         if (rondasGanadasJ1 > rondasGanadasJ2) {
           Console.WriteLine("\nEl jugador 1 ha ganado la partida!!!\n");
         } else if (rondasGanadasJ1 < rondasGanadasJ2) {
@@ -88,9 +90,11 @@ class MainClass {
         } else if (rondasGanadasJ1 == rondasGanadasJ2) {
           Console.WriteLine("\nLa partida ha acabado en empate!!!\n");
         }
+
       } else {
         Console.WriteLine("\nEscribe 1, 3 o 5!!!\n");
       }
+      
     } while (cuantosPajaros != 1 || cuantosPajaros != 3 || cuantosPajaros != 5);
   }
 }
