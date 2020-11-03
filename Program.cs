@@ -2,6 +2,8 @@
 
 class MainClass {
   public static void Main () {
+    
+    //Creamos todos los diferentes pajaros.
     Pajaro[] todospajaros = {
       new Pajaro("Red", "cardenal", "ninguno", 2),
       new Pajaro("Chuck", "canario", "velocidad", 23),
@@ -16,11 +18,13 @@ class MainClass {
       new Pajaro("Terence", "cardenal", "gordo", 44),
     };
 
+    //Empezamos la partida y la ronda.
     Partida partida = new Partida();
     Ronda ronda = new Ronda();
     int cuantosPajaros = 0;
 
     do {
+      //Preguntamos los pajaros, los cuales también serán el numero de rondas.
       Console.WriteLine("Con cuantos pajaros vas a jugar? (1, 3 o 5)");
       cuantosPajaros = Convert.ToInt32(Console.ReadLine());
 
@@ -29,6 +33,7 @@ class MainClass {
         Jugador jugador1 = new Jugador();
         Jugador jugador2 = new Jugador();
 
+        //Recibimos la lista de pajaros random.
         Random rand = new Random();
         for (int n = 0; n < partida.GetPajarosRepartir(); n++) {
           int pajarojugador1 = rand.Next(todospajaros.Length);
@@ -38,6 +43,7 @@ class MainClass {
           jugador2.RecibirPajaros(todospajaros[pajarojugador2], n);
         }
 
+        //Preguntamos el pajaro que el jugador va a seleccionar.
         while (cuantosPajaros != 0) {
           Console.WriteLine("\nJugador 1, que pajaro quieres sacar?");
           Pajaro[] j1pajaros = jugador1.GetPajaros();
@@ -79,6 +85,7 @@ class MainClass {
           } while (!(sacar2 > 0 && sacar2 <= cuantosPajaros));
           */
 
+          //Comprovamos quien ha ganado la ronda.
           int puntuacion = ronda.CompararPajaros(jugador1.SacarPajaros(sacar1-1, cuantosPajaros).GetEnergia(), jugador2.SacarPajaros(sacar2-1, cuantosPajaros).GetEnergia());
           if (puntuacion == 1) {
             jugador1.SumarRondas(true);
@@ -95,6 +102,7 @@ class MainClass {
         int rondasGanadasJ1 = jugador1.GetRondasGanadas();
         int rondasGanadasJ2 = jugador2.GetRondasGanadas();
 
+        //Comprovamos quien ha ganado la partida.
         if (rondasGanadasJ1 > rondasGanadasJ2) {
           Console.WriteLine("\nEl jugador 1 ha ganado la partida!!!\n");
         } else if (rondasGanadasJ1 < rondasGanadasJ2) {
