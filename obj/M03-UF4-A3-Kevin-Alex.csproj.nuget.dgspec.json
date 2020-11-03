@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/M03-UF4-A3-Kevin-Alex.csproj": {}
+    "/espai/user-data/tarda/Escriptori/M03-UF4-A3-Kevin-Alex/M03-UF4-A3-Kevin-Alex.csproj": {}
   },
   "projects": {
-    "/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/M03-UF4-A3-Kevin-Alex.csproj": {
+    "/espai/user-data/tarda/Escriptori/M03-UF4-A3-Kevin-Alex/M03-UF4-A3-Kevin-Alex.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/M03-UF4-A3-Kevin-Alex.csproj",
+        "projectUniqueName": "/espai/user-data/tarda/Escriptori/M03-UF4-A3-Kevin-Alex/M03-UF4-A3-Kevin-Alex.csproj",
         "projectName": "M03-UF4-A3-Kevin-Alex",
-        "projectPath": "/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/M03-UF4-A3-Kevin-Alex.csproj",
+        "projectPath": "/espai/user-data/tarda/Escriptori/M03-UF4-A3-Kevin-Alex/M03-UF4-A3-Kevin-Alex.csproj",
         "packagesPath": "/espai/user-data/tarda/.nuget/packages/",
-        "outputPath": "/espai/user-data/tarda/Escriptori/Mucho texto/M03/M03-UF4-A3-Kevin-Alex/obj/",
+        "outputPath": "/espai/user-data/tarda/Escriptori/M03-UF4-A3-Kevin-Alex/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/espai/user-data/tarda/.nuget/NuGet/NuGet.Config"
