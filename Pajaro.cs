@@ -5,7 +5,7 @@ public class Pajaro {
     private string poder;
     private int energia;
 
-    public void CrearPajaro(string newNombre, string newEspecie, string newPoder, int newEnergia) {
+    public Pajaro(string newNombre, string newEspecie, string newPoder, int newEnergia) {
         nombre = newNombre;
         especie = newEspecie;
         poder = newPoder;
