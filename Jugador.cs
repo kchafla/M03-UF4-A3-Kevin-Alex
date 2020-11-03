@@ -1,6 +1,6 @@
 public class Jugador {
     
-    private Pajaro[] pajarosAsignados = new Pajaro[5];
+    private Pajaro[] pajarosAsignados = new Pajaro[6];
     private int rondasGanadas;
 
     public void SumarRondas(bool ganador) {
@@ -12,12 +12,12 @@ public class Jugador {
     public void RecibirPajaros(Pajaro pajaroAsignado, int posicion) {
         pajarosAsignados[posicion] = pajaroAsignado;
     }
-
+    
     public Pajaro SacarPajaros(int posicion, int cuantosPajaros) {
         Pajaro pajaroParaSacar = pajarosAsignados[posicion];
 
         if (cuantosPajaros != 1) {
-            for (int i = posicion-1; i < 4; i++) {
+            for (int i = posicion; i < cuantosPajaros; i++) {
                 pajarosAsignados[i] = pajarosAsignados[i+1];
             }
         }

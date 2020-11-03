@@ -15,11 +15,9 @@ class MainClass {
       new Pajaro("Stella", "cacatua Galah", "burbujas", 31),
       new Pajaro("Terence", "cardenal", "gordo", 44),
     };
-    
-    Jugador jugador1 = new Jugador();
-    Jugador jugador2 = new Jugador();
 
     Partida partida = new Partida();
+    Ronda ronda = new Ronda();
     int cuantosPajaros = 0;
 
     do {
@@ -27,6 +25,8 @@ class MainClass {
       cuantosPajaros = Convert.ToInt32(Console.ReadLine());
       if (cuantosPajaros == 1 || cuantosPajaros == 3 || cuantosPajaros == 5) {
         partida.EmpezarPartida(cuantosPajaros);
+        Jugador jugador1 = new Jugador();
+        Jugador jugador2 = new Jugador();
 
         Random rand = new Random();
         for (int n = 0; n < partida.GetPajarosRepartir(); n++) {
@@ -37,52 +37,56 @@ class MainClass {
           jugador2.RecibirPajaros(todospajaros[pajarojugador2], n);
         }
 
-        Ronda ronda = new Ronda();
-        for (int r = 0; r < cuantosPajaros; r++) {
+        while (cuantosPajaros != 0) {
           Console.WriteLine("\nJugador 1, que pajaro quieres sacar?");
           Pajaro[] j1pajaros = jugador1.GetPajaros();
-          for (int n = 0; n < cuantosPajaros; n++) {
-            if (n == cuantosPajaros-1) {
-              Console.Write(j1pajaros[n].GetNombre() + ".\n");
+          for (int n = 1; n <= cuantosPajaros; n++) {
+            if (n == cuantosPajaros) {
+              Console.Write(j1pajaros[n-1].GetNombre() + "(" + n + ").\n");
             } else {
-              Console.Write(j1pajaros[n].GetNombre() + ", ");
+              Console.Write(j1pajaros[n-1].GetNombre() + "(" + n + "), ");
             }
           }
-          int sacar1 = Convert.ToInt32(Console.ReadLine());
+          int sacar1 = 0;
+          do {
+            sacar1 = Convert.ToInt32(Console.ReadLine());
+          } while (!(sacar1 > 0 && sacar1 <= cuantosPajaros));
 
           Console.WriteLine("\nJugador 2, que pajaro quieres sacar?");
           Pajaro[] j2pajaros = jugador2.GetPajaros();
-          for (int n = 0; n < cuantosPajaros; n++) {
-            if (n == cuantosPajaros-1) {
-              Console.Write(j2pajaros[n].GetNombre() + ".\n");
+          for (int n = 1; n <= cuantosPajaros; n++) {
+            if (n == cuantosPajaros) {
+              Console.Write(j2pajaros[n-1].GetNombre() + "(" + n + ").\n");
             } else {
-              Console.Write(j2pajaros[n].GetNombre() + ", ");
+              Console.Write(j2pajaros[n-1].GetNombre() + "(" + n + "), ");
             }
           }
-          int sacar2 = Convert.ToInt32(Console.ReadLine());
+          int sacar2 = 0;
+          do {
+            sacar2 = Convert.ToInt32(Console.ReadLine());
+          } while (!(sacar2 > 0 && sacar2 <= cuantosPajaros));
 
           int puntuacion = ronda.CompararPajaros(jugador1.SacarPajaros(sacar1-1, cuantosPajaros).GetEnergia(), jugador2.SacarPajaros(sacar2-1, cuantosPajaros).GetEnergia());
           if (puntuacion == 1) {
-            Console.WriteLine("\nHa ganado jugador 1!");
-            cuantosPajaros--;
             jugador1.SumarRondas(true);
+            Console.WriteLine("\nHa ganado jugador 1! (" + jugador1.GetRondasGanadas() + " - " + jugador2.GetRondasGanadas() + ")");
           } else if (puntuacion == 2) {
-            Console.WriteLine("\nHa ganado jugador 2!");
-            cuantosPajaros--;
             jugador2.SumarRondas(true);
+            Console.WriteLine("\nHa ganado jugador 2! (" + jugador1.GetRondasGanadas() + " - " + jugador2.GetRondasGanadas() + ")");
           } else if (puntuacion == 3) {
-            Console.WriteLine("\nEmpate!");
+            Console.WriteLine("\nEmpate! (" + jugador1.GetRondasGanadas() + " - " + jugador2.GetRondasGanadas() + ")");
           }
+          cuantosPajaros--;
         }
 
         int rondasGanadasJ1 = jugador1.GetRondasGanadas();
         int rondasGanadasJ2 = jugador2.GetRondasGanadas();
         if (rondasGanadasJ1 > rondasGanadasJ2) {
-          Console.WriteLine("\nEl jugador 1 ha ganado la partida!\n");
+          Console.WriteLine("\nEl jugador 1 ha ganado la partida!!!\n");
         } else if (rondasGanadasJ1 < rondasGanadasJ2) {
-          Console.WriteLine("\nEl jugador 2 ha ganado la partida!\n");
+          Console.WriteLine("\nEl jugador 2 ha ganado la partida!!!\n");
         } else if (rondasGanadasJ1 == rondasGanadasJ2) {
-          Console.WriteLine("\nLa partida ha acabado en empate!\n");
+          Console.WriteLine("\nLa partida ha acabado en empate!!!\n");
         }
       } else {
         Console.WriteLine("\nEscribe 1, 3 o 5!!!\n");
