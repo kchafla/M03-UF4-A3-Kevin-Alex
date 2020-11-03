@@ -13,11 +13,13 @@ public class Jugador {
         pajarosAsignados[posicion] = pajaroAsignado;
     }
 
-    public Pajaro SacarPajaros(int posicion) {
+    public Pajaro SacarPajaros(int posicion, int cuantosPajaros) {
         Pajaro pajaroParaSacar = pajarosAsignados[posicion];
 
-        for (int i = posicion-1; i < 4; i++) {
-            pajarosAsignados[i] = pajarosAsignados[i + 1];
+        if (cuantosPajaros != 1) {
+            for (int i = posicion-1; i < 4; i++) {
+                pajarosAsignados[i] = pajarosAsignados[i+1];
+            }
         }
         
         return pajaroParaSacar;
@@ -25,5 +27,9 @@ public class Jugador {
 
     public Pajaro[] GetPajaros() {
         return pajarosAsignados;
+    }
+
+    public int GetRondasGanadas() {
+        return rondasGanadas;
     }
 }
