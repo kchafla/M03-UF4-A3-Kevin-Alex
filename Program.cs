@@ -51,6 +51,9 @@ class MainClass {
           int sacar1 = 0;
           do {
             sacar1 = Convert.ToInt32(Console.ReadLine());
+            if (!(sacar1 > 0 && sacar1 <= cuantosPajaros)) {
+              Console.WriteLine("\nEscribe un numero de las opciones mostradas!!");
+            }
           } while (!(sacar1 > 0 && sacar1 <= cuantosPajaros));
 
           Console.WriteLine("\nJugador 2, que pajaro quieres sacar?");
@@ -62,10 +65,19 @@ class MainClass {
               Console.Write(j2pajaros[n-1].GetNombre() + "(" + n + "), ");
             }
           }
+          // LAS DOS SIGUIENTES LINEAS SON LA V4!!
+          int sacar2 = rand.Next(1, cuantosPajaros+1);
+          Console.WriteLine("Saco el pajaro numero " + sacar2 + "!!");
+
+          /* ESTO ES PARA LA VERSION 3!!
           int sacar2 = 0;
           do {
             sacar2 = Convert.ToInt32(Console.ReadLine());
+            if (!(sacar2 > 0 && sacar2 <= cuantosPajaros)) {
+              Console.WriteLine("\nEscribe un numero de las opciones mostradas!!");
+            }
           } while (!(sacar2 > 0 && sacar2 <= cuantosPajaros));
+          */
 
           int puntuacion = ronda.CompararPajaros(jugador1.SacarPajaros(sacar1-1, cuantosPajaros).GetEnergia(), jugador2.SacarPajaros(sacar2-1, cuantosPajaros).GetEnergia());
           if (puntuacion == 1) {
@@ -94,7 +106,7 @@ class MainClass {
       } else {
         Console.WriteLine("\nEscribe 1, 3 o 5!!!\n");
       }
-      
+
     } while (cuantosPajaros != 1 || cuantosPajaros != 3 || cuantosPajaros != 5);
   }
 }
